@@ -1,0 +1,75 @@
+% ============================================================================
+%  Lettre de motivation — Matthéo ALCAN — Stage 2027 Innovation technologique (Bell Canada)
+%  /!\ Compiler avec XeLaTeX (Overleaf : Menu > Compiler > XeLaTeX)
+%  Même police et mêmes couleurs que le CV (Calibri si présente, sinon Carlito)
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+
+% --- Police -----------------------------------------------------------------
+\usepackage{fontspec}
+\usepackage[french]{babel}
+\IfFileExists{calibri.ttf}
+  {\setmainfont{calibri}[Extension=.ttf, BoldFont=calibrib,
+                         ItalicFont=calibrii, BoldItalicFont=calibriz, RawFeature=-liga]}
+  {\setmainfont{Carlito}[Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold,
+                         ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic, RawFeature=-liga]}
+
+% --- Mise en page -----------------------------------------------------------
+\usepackage[a4paper,top=1.5cm,bottom=1.3cm,left=2.4cm,right=2.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\setlength{\JustifyingParindent}{0pt}
+\setlength{\emergencystretch}{2em}   % évite les débordements de ligne
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Lettre de motivation Mattheo Alcan - Stage 2027 Bell}, pdfauthor={Mattheo Alcan}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}          % espace entre les paragraphes
+\setstretch{1.2}                   % interligne
+\definecolor{navy}{HTML}{1F3864}
+\definecolor{txt}{HTML}{262626}
+\color{txt}
+
+% ============================================================================
+\begin{document}
+
+% --- Expéditeur -------------------------------------------------------------
+{\setstretch{1}
+{\fontsize{20}{22}\selectfont Matthéo \textbf{ALCAN}}\\[3pt]
+{\color{navy}\bfseries Étudiant-ingénieur -- IMT Atlantique}\\
++33 7 67 88 79 74 | \href{mailto:mattheo.alcan@imt-atlantique.net}{mattheo.alcan@imt-atlantique.net}\\
+Brest (29), France\par}
+
+% --- Destinataire -----------------------------------------------------------
+\vspace{14pt}
+{\setstretch{1}\raggedleft
+Madame Rashida Geddes\\
+Programme des diplômés et stagiaires -- Bell Canada\\
+1, carrefour Alexander-Graham-Bell\\
+Verdun (Québec) H3E 3B3\\[12pt]
+Brest, le 7 novembre 2026\par}
+
+\vspace{14pt}
+{\setstretch{1}\textbf{Objet : Candidature -- 2027 Programme de stages, Innovation technologique (réf. 432858)}\par}
+
+\vspace{8pt}
+Madame Geddes,
+
+\justifying
+Après deux étés consécutifs au sein de l'équipe de planification sans fil de Bell, à Montréal, je souhaite revenir pour un troisième stage à l'été 2027, dans le volet ingénierie infonuagique et réseaux ou dans celui des données et de l'intelligence artificielle. Bell m'a appris qu'un réseau se pilote autant par les données et le logiciel que par les équipements : c'est là que je veux progresser.
+
+En 2025, j'ai vérifié la conformité au Code de sécurité 6 de plus de 700 sites et suivi la performance de plus de 30 sites 3G, 4G et 5G. En 2026, avec un périmètre élargi à plus de 1\,500 sites, j'ai encadré deux stagiaires et développé un système multi-agents d'IA qui consulte les bases de données, analyse les documents internes et rédige les rapports : il a préanalysé 20\,\% des sites. J'ai aussi lancé un outil donnant aux ingénieurs RF une meilleure visibilité sur les ressources spectrales, identifié les sites qui manqueront de capacité en 2027 dans l'Arctique et le Nord canadien, et déployé plus de 15 COW et le découpage du réseau (network slicing) pour la Coupe du monde 2026.
+
+Mon gestionnaire, M. Mourad Djadel, planificateur principal, Ingénierie sans fil, a souligné dans mon évaluation mes capacités d'analyse et de résolution de problèmes, mon adaptabilité et mon intégration dans une équipe multidisciplinaire. Lui-même ingénieur diplômé de Télécom Paris, il a aussi relevé que ma formation spécialisée en télécommunications à l'IMT Atlantique (ex Télécom Bretagne), très proche de celle qu'il a suivie, représente un atout pour Bell. Son équipe espère m'accueillir de nouveau.
+
+En dehors de Bell, j'ai consolidé mes bases en développement logiciel. À l'IMT Atlantique, j'ai développé en Java, en équipe de quatre, un simulateur de transmission numérique répondant à un appel d'offres, avec tests unitaires JUnit, gestion de versions sous Git et revues de code. Chez Roborative, j'ai rédigé le cahier des charges d'un projet d'automatisation, piloté les jalons avec le client et formé les opérateurs, ce qui m'a appris à partir du besoin réel des utilisateurs.
+
+L'ambition de Bell de devenir une entreprise de premier plan en services technologiques, appuyée sur l'IA, correspond exactement à ce que je veux construire : des outils qui automatisent la planification et l'exploitation du réseau. Je suis disponible de mai à août 2027 et je reprendrai mes études à l'automne 2027. Bilingue, je peux travailler en mode hybride à Montréal comme à Toronto, et j'ai déjà mené à bien deux fois les démarches de permis de travail au Canada.
+
+Je serais ravi d'en discuter lors d'un entretien. Je vous prie d'agréer, Madame Geddes, l'expression de mes salutations distinguées.
+
+\vspace{14pt}
+{\raggedleft Matthéo Alcan\par}
+
+\end{document}

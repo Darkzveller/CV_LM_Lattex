@@ -1,0 +1,159 @@
+% ============================================================================
+%  CV — Matthéo ALCAN — Stage 2027 Innovation technologique (Bell Canada)
+%  /!\ Compiler avec XeLaTeX (Overleaf : Menu > Compiler > XeLaTeX)
+%  Police : Calibri si les fichiers calibri*.ttf sont dans le projet,
+%           sinon Carlito (clone de Calibri, mêmes dimensions au millimètre)
+%  Taille 11 pt -- interligne multiple 1,15 -- missions justifiées
+%  Optimisé ATS : 1 colonne, pas d'icônes, texte copiable, sections standard
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+
+% --- Police -----------------------------------------------------------------
+\usepackage{fontspec}
+\usepackage[french]{babel}
+\IfFileExists{calibri.ttf}
+  {\setmainfont{calibri}[Extension=.ttf, BoldFont=calibrib,
+                         ItalicFont=calibrii, BoldItalicFont=calibriz, RawFeature=-liga]}
+  {\setmainfont{Carlito}[Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold,
+                         ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic, RawFeature=-liga]}
+% (-liga : pas de ligatures « ti », « fi »… => texte lu proprement par les ATS)
+
+% --- Interligne & justification ---------------------------------------------
+\usepackage{setspace}
+\setstretch{1.15}               % interligne multiple 1,15
+\usepackage{ragged2e}           % \justifying pour les paragraphes de missions
+\setlength{\JustifyingParindent}{0pt}
+
+% --- Taille du texte courant ------------------------------------------------
+% 10,5 pt pour tenir sur une page (mets 11 et 13.2 pour du 11 pt)
+\newcommand{\corps}{\fontsize{10.5}{12.6}\selectfont}
+
+% --- Mise en page -----------------------------------------------------------
+\usepackage[a4paper,top=0.9cm,bottom=0.8cm,left=1.2cm,right=1.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={CV Mattheo Alcan - Stage 2027 Innovation technologique Bell},
+            pdfauthor={Mattheo Alcan},
+            pdfkeywords={stage technologie, developpement logiciel, intelligence artificielle, donnees, reseaux, 5G, automatisation, Python, Java, C++, SQL, Power BI, Grafana}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% --- Couleurs (reprises du CV d'origine) ------------------------------------
+\definecolor{navy}{HTML}{1F3864}   % titres de section
+\definecolor{imtblue}{HTML}{2E75B6} % entreprises / écoles
+\definecolor{sage}{HTML}{70AD47}    % intitulés de poste
+\definecolor{txt}{HTML}{262626}
+\color{txt}
+
+% --- Titres de section ------------------------------------------------------
+\titleformat{\section}{\color{navy}\bfseries\large}{}{0pt}{\MakeUppercase}[{\color{navy}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{6pt}{5pt}   % {gauche}{espace AVANT le titre}{espace APRÈS le trait}
+
+% --- Listes de missions (justifiées, 11 pt) ----------------------------------
+\setlist[itemize]{before={\corps\justifying},leftmargin=11pt,itemsep=0pt,topsep=1pt,parsep=0pt,label={\color{gray!70}\raisebox{0.2ex}{\fontsize{7.5}{9}\selectfont\textbullet}}}
+
+% --- Commandes perso --------------------------------------------------------
+% \entree{Intitulé}{Dates}{Structure}{Lieu}
+\newcommand{\entree}[4]{{\setstretch{1}%   titres d'entrée en interligne simple
+  \textbf{\color{sage}#1}\hfill\textbf{#2}\\
+  {\color{imtblue}\textbf{#3}}\hfill{\small #4}\par}\vspace{1pt}}
+% \sousentree{Intitulé}{Dates} : pour plusieurs postes dans une même entreprise
+\newcommand{\sousentree}[2]{{\setstretch{1}\textbf{\color{sage}#1}\hfill\textbf{#2}\par}\vspace{1pt}}
+\newcommand{\sous}[1]{\textit{\color{navy}#1}}
+
+% ============================================================================
+\begin{document}
+
+% --- En-tête ----------------------------------------------------------------
+\begin{minipage}[t]{0.62\textwidth}
+  {\fontsize{22}{24}\selectfont Matthéo \textbf{ALCAN}}\\[3pt]
+  {\fontsize{14}{16.5}\selectfont\bfseries\color{navy}Stage 2027 -- Innovation technologique :\\ réseaux, données \& IA (Bell)}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.36\textwidth}\raggedleft\small
+  \IfFileExists{logo_imt.png}{\includegraphics[height=0.9cm]{logo_imt.png}\\[2pt]}{}
+  +33 7 67 88 79 74\\
+  \href{mailto:mattheo.alcan@imt-atlantique.net}{mattheo.alcan@imt-atlantique.net}\\
+  Brest (29) -- Mobilité : Montréal, Toronto\\
+  \textbf{Disponible de mai à août 2027}
+\end{minipage}
+
+\vspace{6pt}   % espace entre l'en-tête et l'introduction
+{\corps\justifying Étudiant-ingénieur en 2\textsuperscript{e} année à l'IMT Atlantique, j'ai effectué deux stages en \textbf{ingénierie radio} chez Bell, où j'ai développé des \textbf{agents IA}, lancé un \textbf{outil interne} pour les ingénieurs RF et conçu des \textbf{tableaux de bord} (Power BI, Grafana). \textbf{Analytique} et \textbf{proactif}, je souhaite contribuer au \textbf{développement d'outils} et à l'\textbf{automatisation des réseaux}.\par}
+
+% ============================================================================
+\section{Formation}
+
+\entree{Ingénieur par apprentissage -- Informatique, réseaux \& télécommunications (Bac + 5)}{Depuis sept. 2025}{IMT Atlantique (ex Télécom Bretagne)}{Brest, France}
+{\corps\color{gray!80!black} \textbf{Stage de 4 mois} à l'été 2027, puis \textbf{retour aux études à l'automne 2027} (3\textsuperscript{e} année du cycle ingénieur)\par}
+\begin{itemize}
+  \item \textbf{Génie logiciel} : algorithmique, programmation orientée objet (C++, Java), modélisation UML, \textbf{tests et débogage}
+  \item \textbf{Réseaux IP}, \textbf{Linux} et scripts Bash, \textbf{traitement du signal} et communications numériques (MATLAB, Python)
+\end{itemize}
+\vspace{3pt}
+
+\entree{BUT GEII -- Électronique et systèmes embarqués, option mécatronique}{Sept. 2022 -- août 2025}{IUT de Cachan (Université Paris-Saclay)}{Cachan, France}
+\begin{itemize}
+  \item \textbf{Projet fil rouge} : robot auto-équilibré de type Segway -- CAO, PCB, capteurs IMU, C++, asservissement PID, UML
+  \item \textbf{3\textsuperscript{e} année en échange universitaire à l'ÉTS Montréal} (Québec) : génie électrique et informatique
+\end{itemize}
+
+% ============================================================================
+\section{Expériences professionnelles}
+
+\entree{Apprenti ingénieur (1\textsuperscript{re} puis 2\textsuperscript{e} année IMT) -- Logiciel \& réseaux industriels}{Oct. 2026 -- janv. 2027 (en cours)}{Roborative -- Caen, France}{\textbf{\normalsize Déc. 2025 -- mai 2026 (6 mois)}}
+\begin{itemize}
+  \item \textbf{Développement en Rust d'une librairie EtherNet/IP} (scanner et adapter) pour dialoguer avec un automate depuis un PC
+  \item \textbf{Validation} face aux piles de référence OpENer (C) et EIPScanner (C++) : réseau virtuel, \textbf{Wireshark}, \textbf{tests unitaires}
+  \item \textbf{Projet Piercan} : \textbf{cahier des charges}, GRAFCET, \textbf{programmation de l'automate} (PLC) et \textbf{formation des opérateurs}
+\end{itemize}
+\vspace{2pt}
+
+\entree{Stages internationaux (BUT 3, puis 1\textsuperscript{re} année IMT) -- Ingénieur réseaux \& télécoms}{Mai 2026 -- août 2026 (4 mois)}{Bell Canada -- Montréal, Canada}{\textbf{\normalsize Mai 2025 -- août 2025 (4 mois)}}
+\begin{itemize}
+  \item \textbf{Développement d'un système multi-agents IA} (bases de données, documents, rapports) préanalysant \textbf{20\,\%} de \textbf{1\,500+ sites}
+  \item \textbf{Lancement d'un outil interne} pour les ingénieurs RF (visibilité sur le spectre) ; requêtes \textbf{SQL} sur les bases réseau
+  \item \textbf{Planification de capacité 2027} (Arctique, Nord canadien) et \textbf{supervision} sous \textbf{Power BI} et Grafana (30+ sites 3G/4G/5G)
+  \item \textbf{Déploiement} de \textbf{15+ COW} et \textbf{network slicing} (Coupe du monde 2026) ; \textbf{encadrement} de 2 stagiaires (conformité RF)
+  \item \textit{Évaluation de fin de stage : capacités d'analyse et de résolution de problèmes saluées, recommandé pour un futur stage}
+\end{itemize}
+\vspace{2pt}
+
+\entree{Stage -- Technicien en mécatronique (projet embarqué, partenariat Ma Compagnie)}{Avr. -- juin 2024 (3 mois)}{Innov'lab -- IUT de Cachan}{Cachan, France}
+\begin{itemize}
+  \item \textbf{Définition de l'architecture} et \textbf{conception} d'une chaîne d'acquisition (bobines, amplification, filtre) pour guider 5 robots
+  \item \textbf{Développement} de l'asservissement sur STM32 et d'une liaison radio XBee ; \textbf{tests, débogage} et documentation
+\end{itemize}
+
+% ============================================================================
+\section{Projets}
+
+\entree{Atelier logiciel SIT213 -- Simulateur de transmission numérique (Java)}{Sept. -- oct. 2026 (5 semaines)}{IMT Atlantique -- équipe de 4, développeur Java}{Brest, France}
+\begin{itemize}
+  \item \textbf{Développement} en Java (POO) d'une \textbf{architecture modulaire} (bruit, multitrajets, codage) pour répondre à un \textbf{appel d'offres}
+  \item \textbf{Tests unitaires JUnit} et de couverture (\textbf{0 régression}), \textbf{Git} (une branche par membre), \textbf{revues de code} ; analyse en Python
+\end{itemize}
+\vspace{2pt}
+
+\entree{Coupe de France de robotique EuroBot (33\textsuperscript{e}/82) \& Coupe d'Île-de-France (2\textsuperscript{e} place)}{Sept. 2023 -- juil. 2024}{Club de robotique de l'IUT de Cachan -- coresponsable}{Cachan, France}
+\begin{itemize}
+  \item \textbf{Conception} mécanique et électronique du robot, protocole CAN $\leftrightarrow$ UART et \textbf{programmation} des actionneurs en C++
+\end{itemize}
+
+% ============================================================================
+\section{Compétences}
+% Deux colonnes "visuelles" : chaque ligne reste UNE seule ligne de texte (lecture ATS fiable)
+\newcommand{\comp}[2]{\noindent\makebox[4.1cm][l]{\textbf{#1 :}}#2\par}
+{\corps
+\comp{Programmation}{Python | Java | C++ | C | Rust | SQL | MATLAB | Bash / Linux}
+\comp{IA \& données}{Systèmes multi-agents IA | Power BI | Grafana | SQL | tableaux de bord | analyse de données}
+\comp{Réseaux \& télécoms}{Réseaux IP | EtherNet/IP | Wireshark | 3G / 4G / 5G | network slicing | RF | Nokia / Ericsson}
+\comp{Méthodes \& outils}{Git | tests unitaires (JUnit) | revues de code | débogage | analyse des besoins | UML}
+\comp{Langues}{Français (langue maternelle) | Anglais : bilingue (TOEIC 885/990, \textbf{1 an et 4 mois au Canada})}
+}
+
+\end{document}

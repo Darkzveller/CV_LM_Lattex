@@ -1,0 +1,12 @@
+# Windows
+desktop.ini
+Thumbs.db
+
+# Fichiers temporaires LaTeX
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.toc

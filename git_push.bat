@@ -1,2 +1,2 @@
 echo off
-git status && git add . && git commit -m "Premiere version du cv" && git push
+git status && git add . && git commit -m "CV officiel + fichier installation" && git push

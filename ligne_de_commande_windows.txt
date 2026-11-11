@@ -1,0 +1,14 @@
+
+
+pdflatex --version
+latexmk -v
+perl -v
+kpsewhich extarticle.cls
+
+latexmk -xelatex "CV_Youssef_EL_KATTOUFI_refonte.tex"
+
+créer .vscode -> settings.json et ecrire ca 
+{
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+  "latex-workshop.view.pdf.viewer": "tab"
+}

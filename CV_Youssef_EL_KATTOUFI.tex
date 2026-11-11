@@ -1,0 +1,139 @@
+% ============================================================================
+% CV de Youssef EL KATTOUFI -- version francophone, novembre 2026
+% Conception : CV d'une page, une colonne, texte selectionnable (ATS).
+% Références : CV personnel fourni, CV de Matthéo Alcan (mise en page),
+%              LinkedIn et dépôts publics GitHub de Youssef.
+%
+% COMPILATION : XeLaTeX (Overleaf : Menu > Compilateur > XeLaTeX)
+% La police Carlito, libre, est proche de Calibri et disponible sur Overleaf.
+% Pour adapter le CV à une offre, commencer par la ligne \objectif et les projets.
+% ============================================================================
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,top=0.98cm,bottom=0.84cm,left=1.25cm,right=1.25cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Carlito}[Ligatures=NoCommon, BoldFont={Carlito Bold}, ItalicFont={Carlito Italic}]
+\usepackage[french]{babel}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={CV - Youssef EL KATTOUFI - Electronique et Informatique},
+  pdfauthor={Youssef EL KATTOUFI},
+  pdfsubject={Candidature stage de quatre mois 2027},
+  pdfkeywords={Polytech Sorbonne, electronique, systemes embarques, STM32, ESP32, C++, Python, robotique, IoT, electronique de puissance}
+}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\setstretch{1.02}
+
+% Palette sobre inspiree du CV de reference ; modifier ces 3 couleurs si besoin.
+\definecolor{marine}{HTML}{1F3864}
+\definecolor{bleu}{HTML}{2E75B6}
+\definecolor{vert}{HTML}{4F862E}
+\definecolor{texte}{HTML}{242424}
+\color{texte}
+
+% Style des titres de rubriques.
+\titleformat{\section}{\fontsize{10.9}{12.5}\selectfont\bfseries\color{marine}}{}{0pt}{\MakeUppercase}[{\color{marine}\titlerule[0.5pt]}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Listes et entrees : la premiere ligne donne la mission, la seconde l'employeur.
+\setlist[itemize]{leftmargin=11pt, itemsep=0.55pt, topsep=1.7pt, partopsep=0pt, parsep=0pt,
+ label={\color{gray!70}\raisebox{0.15ex}{\scriptsize\textbullet}}}
+\newcommand{\cventry}[4]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.02cm}@{}}
+    {\color{vert}\bfseries #1} & {\bfseries\small #2} \\[-1.2pt]
+    {\color{bleu}\bfseries #3} & {\small #4}
+  \end{tabularx}\vspace{-4pt}\par
+}
+\newcommand{\itemgap}{\vspace{1.5pt}}
+\newcommand{\comp}[2]{\noindent\textbf{#1 :} #2\par}
+\newcommand{\objectif}{Stage de 4 mois à partir de mai 2027}
+
+\begin{document}
+% ===== EN-TÊTE ===============================================================
+\begin{minipage}[t]{0.61\linewidth}
+  {\fontsize{22}{24}\selectfont Youssef \textbf{EL KATTOUFI}}\\[3pt]
+  {\fontsize{12.0}{14}\selectfont\color{marine}\bfseries
+  Élève-ingénieur en électronique et informatique}\\[2pt]
+  {\fontsize{10.3}{12.2}\selectfont\color{marine}\bfseries \objectif}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.375\linewidth}\raggedleft\fontsize{9.3}{10.8}\selectfont
+  Choisy-le-Roi, France\\
+  \href{tel:+33651654237}{+33 6 51 65 42 37}\\
+  \href{mailto:elkattoufi.youssef@hotmail.com}{elkattoufi.youssef@hotmail.com}\\
+  \href{https://www.linkedin.com/in/youssef-el-kattoufi-5a04a0282/}{LinkedIn} \enspace | \enspace
+  \href{https://github.com/Darkzveller}{GitHub : Darkzveller}
+\end{minipage}
+
+\vspace{5pt}
+{\fontsize{9.8}{11.4}\selectfont\justifying
+En 4\textsuperscript{e} année à \textbf{Polytech Sorbonne}, après un BUT GEII, je développe des systèmes mêlant \textbf{électronique, programmation embarquée et automatique}. Mes expériences industrielles et mes projets de \textbf{robotique, IoT et électronique de puissance} m'amènent à travailler de la conception aux essais.\par}
+
+% ===== FORMATION ============================================================== 
+\section{Formation}
+\cventry{Diplôme d'ingénieur -- Électronique et Informatique}{Sept. 2025 -- juin 2028}{Polytech Sorbonne -- Sorbonne Université}{Paris, France}
+\begin{itemize}
+  \item Traitement du signal, microcontrôleurs ARM, VHDL/FPGA, architecture des systèmes, automatique, programmation C/C++ et Python.
+\end{itemize}
+\itemgap
+\cventry{BUT Génie électrique et informatique industrielle -- parcours EME}{Sept. 2022 -- août 2025}{IUT de Cachan -- Université Paris-Saclay}{Cachan, France}
+\begin{itemize}
+  \item Électricité et maîtrise de l'énergie : conversion d'énergie, électronique de puissance, réseaux électriques et automatismes industriels.
+\end{itemize}
+
+% ===== EXPERIENCES ============================================================== 
+\section{Expériences professionnelles}
+\cventry{Surveillant de baignade}{Juil. -- août 2026}{Centre aquatique de Villecresnes -- Grand Paris Sud Est Avenir}{Villecresnes, France}
+\begin{itemize}
+  \item Surveillance des bassins, prévention des risques, sécurité des usagers et coordination des premiers secours.
+\end{itemize}
+\itemgap
+\cventry{Apprenti ingénieur en génie électrique}{Oct. 2024 -- août 2025}{Syctom -- UVE Isséane et Saint-Ouen}{Île-de-France}
+\begin{itemize}
+  \item \textbf{GTB :} rédaction des pièces techniques et lancement d'un marché subséquent pour le renouvellement de la gestion technique du bâtiment à Isséane.
+  \item \textbf{Énergie :} estimation budgétaire et étude d'amortissement d'une station de recharge pour véhicules électriques.
+  \item \textbf{Infrastructure :} bons de commande et coordination des travaux d'installation de fibre optique sur le site de Saint-Ouen.
+\end{itemize}
+\itemgap
+\cventry{Stage -- Technicien électronicien supérieur}{Avr. -- juin 2024}{Cobham Aerospace Communications}{France}
+\begin{itemize}
+  \item \textbf{Banc de test :} développement C++ sur microcontrôleur, interface de pilotage et validation fonctionnelle d'équipements électroniques.
+  \item \textbf{Conception :} schémas et simulations de circuits électroniques sous LTspice ; essais et documentation technique.
+\end{itemize}
+
+% ===== PROJETS ===============================================================
+\section{Projets techniques et associatifs}
+\cventry{Trottinette à double motorisation -- moteur principal sans terres rares}{Sept. 2024 -- juil. 2025}{Projet de BUT GEII -- conception, électronique et essais}{Cachan, France}
+\begin{itemize}
+  \item Conception de cartes \textbf{PCB}, programmation \textbf{STM32/ESP32}, odométrie et asservissement vitesse/position ; CAO 3D, rebobinage moteur et essais sur onduleur triphasé.
+\end{itemize}
+\itemgap
+\cventry{Coupe de France de robotique -- Responsable électronique et asservissement}{Sept. 2024 -- mai 2025}{Club Robotique des Amis de la Coupe (CRAC)}{Projet associatif}
+\begin{itemize}
+  \item Architecture de commande d'une base roulante : \textbf{C++/FreeRTOS sur ESP32}, code moteur, odométrie, boucles PID, bus CAN et mise à jour OTA.
+\end{itemize}
+\itemgap
+\cventry{Systèmes embarqués et IoT -- Travaux Polytech Sorbonne}{2026}{\href{https://github.com/Darkzveller/TP2_MCU}{STM32 / ADXL345} \quad | \quad \href{https://github.com/Darkzveller/TP_1_IOT_S7_polytech_sorbonne}{ESP32 / Node-RED}}{Projets universitaires}
+\begin{itemize}
+  \item Acquisition d'accélérations par \textbf{SPI}, transmission \textbf{UART} et affichage Processing ; remontée de mesures DHT11 et commande à distance par \textbf{HTTP REST/MQTT}.
+\end{itemize}
+
+% ===== COMPÉTENCES ===========================================================
+\section{Compétences et certifications}
+{\fontsize{9.45}{10.85}\selectfont
+\comp{Électronique / embarqué}{STM32, ESP32, PCB, capteurs, VHDL/FPGA, régulation PID, CAN, UART, SPI, I\textsuperscript{2}C}
+\comp{Programmation / IoT}{C, C++, Python, MQTT, HTTP REST, Node-RED, Arduino, FreeRTOS}
+\comp{Conception et outils}{KiCad, LTspice, SolidWorks, AutoCAD Electrical, MATLAB, PlatformIO, Keil, STM32CubeIDE, Git}
+\comp{Fabrication / mesures}{Prototypage, imprimantes 3D, CNC, graveuse laser, oscilloscopes, analyseur logique}
+\comp{Certifications / langues}{BNSSA, PSE2 ; français, anglais B1 (documentation technique)}
+}
+
+\end{document}

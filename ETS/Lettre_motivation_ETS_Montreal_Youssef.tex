@@ -1,0 +1,115 @@
+% ============================================================================
+% Lettre de motivation - semestre de mobilite a l'ETS Montreal, automne 2027
+% Style aligne sur CV_Youssef_EL_KATTOUFI_refonte : Carlito, bleu #263068,
+% rouge #E6332A et illustrations vectorielles identiques en marge droite.
+% Mise en page inspiree de Lettre_Alcan_Bell. Compiler avec XeLaTeX.
+% ============================================================================
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,top=1.36cm,bottom=1.30cm,left=1.84cm,right=2.04cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Carlito}[BoldFont={Carlito Bold},ItalicFont={Carlito Italic},Ligatures=NoCommon]
+\usepackage[french]{babel}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric}
+\usepackage{eso-pic}
+\usepackage[hidelinks]{hyperref}
+\definecolor{bleu}{HTML}{263068}
+\definecolor{rouge}{HTML}{E6332A}
+\definecolor{gris}{HTML}{9EA6B6}
+\definecolor{anthracite}{HTML}{222936}
+\definecolor{secondaire}{HTML}{475269}
+\color{anthracite}
+\hypersetup{pdftitle={Lettre de motivation - ETS Montreal - Youssef EL KATTOUFI},pdfauthor={Youssef EL KATTOUFI}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7.0pt}
+\setlength{\emergencystretch}{1.6em}
+\setstretch{1.14}
+\setlength{\JustifyingParindent}{0pt}
+
+% EXACTEMENT les quatre decorations vectorielles du CV utilisateur.
+\newcommand{\decorationsCV}{%
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[bleu, opacity=.11,line width=.48pt] ([xshift=-8.0mm,yshift=-50mm]current page.north east) -- ([xshift=-8.0mm,yshift=24mm]current page.south east);
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-65mm]current page.north east)},scale=.70,opacity=.29,draw=bleu,line width=.64pt,line cap=round,line join=round]
+    \fill[white] (-.57,-.57) rectangle (.57,.57);
+    \draw[rounded corners=1pt,fill=bleu!6] (-.47,-.45) rectangle (.47,.45);
+    \draw[rounded corners=1pt] (-.27,-.23) rectangle (.27,.23);
+    \foreach \t in {-.31,-.1,.11,.32}{\draw (-.47,\t)--(-.76,\t); \draw (.47,\t)--(.76,\t);}
+    \foreach \t in {-.3,-.1,.1,.3}{\draw (\t,-.45)--(\t,-.72);\draw (\t,.45)--(\t,.72);}
+    \draw[rouge] (-.27,.14)--(-.1,.14)--(-.1,-.03)--(.14,-.03);
+    \fill[rouge] (.14,-.03) circle (.048);
+  \end{scope}
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-116mm]current page.north east)},scale=.75,opacity=.27,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw (-.43,-.57)--(.45,-.57) (0,-.56)--(0,.5) (-.28,-.34)--(0,.5)--(.28,-.34);
+    \fill[rouge] (0,.55) circle (.085);
+    \draw[rouge] (.19,.31) arc (42:-42:.35);
+    \draw[rouge] (-.19,.31) arc (138:222:.35);
+    \draw (.32,.48) arc (42:-42:.62);
+    \draw (-.32,.48) arc (138:222:.62);
+  \end{scope}
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-179mm]current page.north east)},scale=.77,opacity=.27,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw[rounded corners=2pt,fill=bleu!6] (-.55,-.26) rectangle (.55,.36);
+    \draw[fill=rouge!30] (-.35,-.43) circle (.18) (.35,-.43) circle (.18);
+    \fill[bleu] (-.35,-.43) circle (.06) (.35,-.43) circle (.06);
+    \draw (0,.36)--(0,.57);\fill[rouge] (0,.63) circle (.08);
+    \draw (-.24,.13) circle (.09) (.24,.13) circle (.09);
+    \draw (-.2,-.08)--(.2,-.08);
+    \draw (-.55,.12)--(-.74,.25) (.55,.12)--(.74,.25);
+  \end{scope}
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-238mm]current page.north east)},scale=.73,opacity=.28,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw (0,.32) circle (.14) (-.44,.07) circle (.13) (.44,.07) circle (.13);
+    \draw (-.22,-.12) arc (155:25:.28) (-.67,-.48) arc (155:25:.24) (.21,-.48) arc (155:25:.24);
+    \draw[rouge] (-.33,-.25)--(0,-.58)--(.33,-.25);
+    \draw[fill=rouge!20] (0,-.59) circle (.12);
+  \end{scope}
+\end{tikzpicture}}
+\AddToShipoutPictureBG{\decorationsCV}
+
+\begin{document}
+% Header : charte graphique du CV et structure de la lettre de reference.
+{\setstretch{1}
+{\fontsize{19.6}{21.5}\selectfont\bfseries\color{bleu}Youssef EL KATTOUFI}\par\vspace{2pt}
+{\fontsize{9.8}{11}\selectfont\bfseries\color{rouge}ÉLÈVE-INGÉNIEUR -- ÉLECTRONIQUE ET INFORMATIQUE}\par\vspace{3.5pt}
+{\fontsize{9.2}{10.2}\selectfont Choisy-le-Roi, France\quad\textcolor{gris}{|}\quad +33 6 51 65 42 37\quad\textcolor{gris}{|}\quad \href{mailto:elkattoufi.youssef@hotmail.com}{elkattoufi.youssef@hotmail.com}}\par}
+\vspace{7pt}
+\textcolor{rouge}{\rule{1.45cm}{1.65pt}}\hspace{1.5pt}\textcolor{gris!65}{\rule{\dimexpr\linewidth-1.65cm\relax}{.55pt}}\par
+\vspace{6pt}
+
+{\fontsize{9.35}{10.5}\selectfont\raggedleft
+À l'attention de l'École de technologie supérieure (ÉTS)\\
+Montréal (Québec), Canada\\[3pt]
+Choisy-le-Roi, le 13 novembre 2026\par}
+\vspace{5pt}
+{\fontsize{10}{11.5}\selectfont\bfseries\color{bleu}Objet : Candidature pour un semestre d'études à l'ÉTS Montréal -- Automne 2027\par}
+\vspace{3pt}
+
+\fontsize{10.7}{12.35}\selectfont
+Madame, Monsieur,
+
+\justifying
+Actuellement étudiant en quatrième année du cycle ingénieur en Électronique et Informatique à Polytech Sorbonne (Sorbonne Université), après avoir obtenu un BUT Génie Électrique et Informatique Industrielle à l'IUT de Cachan, je souhaite réaliser mon semestre d'études à l'étranger au sein de l'École de technologie supérieure de Montréal, à l'automne 2027.
+
+Depuis le lycée, je souhaite m'investir dans le domaine de l'ingénierie et je me suis progressivement orienté vers tout ce qui touche à l'électricité, aussi bien l'électronique de puissance que les signaux faibles. Effectuer un semestre au Canada serait pour moi l'occasion de découvrir une autre manière d'apprendre l'ingénierie, de comprendre comment les futurs ingénieurs y sont formés et encouragés à réfléchir, à chercher des solutions et à aller plus loin dans leurs projets. C'est justement cette différence d'approche qui m'intéresse et que j'aimerais découvrir à travers cette mobilité.
+
+Je souhaite aujourd'hui enrichir mon parcours académique en effectuant un semestre à l'ÉTS Montréal, afin d'approfondir mes connaissances dans le domaine du génie électrique et de l'informatique, tout en découvrant de nouvelles approches pédagogiques et techniques.
+
+L'ÉTS Montréal, par sa renommée internationale et ses liens étroits avec le milieu industriel, représente pour moi une opportunité d'explorer de nouvelles technologies et d'approfondir mes connaissances dans plusieurs domaines de l'ingénierie. Mes expériences académiques et professionnelles m'ont également permis de développer mes compétences techniques et ma capacité à résoudre des problèmes complexes au sein d'équipes multidisciplinaires.
+
+Depuis le début de mes études supérieures, et notamment dès mon BUT Génie Électrique et Informatique Industrielle, j'ai pu me familiariser avec des domaines clés tels que la programmation, les systèmes embarqués, la conception électronique et la mise en place d'asservissements. Des connaissances que j'ai ensuite approfondies à Polytech Sorbonne et qui, je le crois, correspondent aux enseignements proposés par l'ÉTS Montréal.
+
+En tant qu'élève sérieux, polyvalent, rigoureux, curieux et travailleur, j'ai toujours cherché à approfondir mes connaissances et à progresser dans les domaines qui m'intéressent. Mon intérêt pour l'ingénierie, développé au fil de mon parcours scolaire, se reflète également dans mon engagement au sein du Club de Robotique des Amis de la Coupe. En tant que membre actif, j'ai participé à un projet commun visant à concevoir un robot capable d'accomplir différentes actions lors de la Coupe de France de Robotique, impliquant une collaboration étroite avec les autres membres de l'équipe.
+
+Effectuer un semestre d'études au Canada serait donc pour moi l'occasion de poursuivre cet apprentissage dans un nouvel environnement, tout en découvrant une autre culture et en développant mon autonomie.
+
+Je me tiens à votre disposition pour un entretien afin de discuter de ma candidature plus en détail et de partager mon enthousiasme pour cette formation.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{2pt}
+{\raggedleft\bfseries\color{bleu}Youssef EL KATTOUFI\par}
+\end{document}

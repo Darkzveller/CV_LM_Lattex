@@ -1,2 +1,2 @@
 echo off
-git status && git add . && git commit -m "CV ETS fait" && git push
+git status && git add . && git commit -m "LM ETS fait" && git push

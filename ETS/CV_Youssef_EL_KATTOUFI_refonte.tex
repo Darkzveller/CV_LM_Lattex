@@ -1,0 +1,173 @@
+% ============================================================================
+% CV Youssef EL KATTOUFI - version ingenieur, novembre 2026
+% LuaLaTeX recommande (Overleaf > Menu > Compilateur > LuaLaTeX)
+% Contenus repris du CV fourni, du cadrage transmis et des repos publics.
+% IMPORTANT : les gains marques * sont des scenarios et NON des resultats mesures.
+% Identite : bleu / rouge inspires du logo Sorbonne Universite ; gris du
+%           langage graphique Polytech. Aucune reproduction de logo officiel.
+% Illustrations entierement vectorielles TikZ, dans la marge droite.
+% ============================================================================
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[a4paper,top=0.95cm,bottom=0.82cm,left=1.24cm,right=1.62cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Carlito}[BoldFont={Carlito Bold}, ItalicFont={Carlito Italic},Ligatures=NoCommon]
+\usepackage[french]{babel}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric}
+\usepackage{eso-pic}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={CV - Youssef EL KATTOUFI - Electronique et Informatique},pdfauthor={Youssef EL KATTOUFI},pdfsubject={Candidature à une mobilité internationale – Semestre d'automne 2027},colorlinks=true,urlcolor=bleu}
+\definecolor{bleu}{HTML}{263068}
+\definecolor{rouge}{HTML}{E6332A}
+\definecolor{gris}{HTML}{9EA6B6}
+\definecolor{anthracite}{HTML}{222936}
+\definecolor{secondaire}{HTML}{475269}
+\definecolor{fond}{HTML}{F0F2F7}
+\color{anthracite}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\renewcommand{\arraystretch}{0.98}
+\newcommand{\stage}{Candidature à une mobilité internationale – Semestre d'automne 2027}
+
+% --- Iconographie TikZ originale, placee hors du bloc de texte --------------
+\newcommand{\decorationsCV}{%
+\begin{tikzpicture}[remember picture, overlay]
+  % Fine ligne de connexion dans la marge droite
+  \draw[bleu, opacity=.11,line width=.48pt] ([xshift=-8.0mm,yshift=-50mm]current page.north east) -- ([xshift=-8.0mm,yshift=24mm]current page.south east);
+  % Puce + pistes de microcontroleur
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-65mm]current page.north east)},scale=.70,opacity=.29,draw=bleu,line width=.64pt,line cap=round,line join=round]
+    \fill[white] (-.57,-.57) rectangle (.57,.57);
+    \draw[rounded corners=1pt,fill=bleu!6] (-.47,-.45) rectangle (.47,.45);
+    \draw[rounded corners=1pt] (-.27,-.23) rectangle (.27,.23);
+    \foreach \t in {-.31,-.1,.11,.32}{\draw (-.47,\t)--(-.76,\t); \draw (.47,\t)--(.76,\t);}
+    \foreach \t in {-.3,-.1,.1,.3}{\draw (\t,-.45)--(\t,-.72);\draw (\t,.45)--(\t,.72);}
+    \draw[rouge] (-.27,.14)--(-.1,.14)--(-.1,-.03)--(.14,-.03);
+    \fill[rouge] (.14,-.03) circle (.048);
+  \end{scope}
+  % Antenne, rayonnement radio
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-116mm]current page.north east)},scale=.75,opacity=.27,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw (-.43,-.57)--(.45,-.57) (0,-.56)--(0,.5) (-.28,-.34)--(0,.5)--(.28,-.34);
+    \fill[rouge] (0,.55) circle (.085);
+    \draw[rouge] (.19,.31) arc (42:-42:.35);
+    \draw[rouge] (-.19,.31) arc (138:222:.35);
+    \draw (.32,.48) arc (42:-42:.62);
+    \draw (-.32,.48) arc (138:222:.62);
+  \end{scope}
+  % Robot a roues, avec capteur et electronique
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-179mm]current page.north east)},scale=.77,opacity=.27,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw[rounded corners=2pt,fill=bleu!6] (-.55,-.26) rectangle (.55,.36);
+    \draw[fill=rouge!30] (-.35,-.43) circle (.18) (.35,-.43) circle (.18);
+    \fill[bleu] (-.35,-.43) circle (.06) (.35,-.43) circle (.06);
+    \draw (0,.36)--(0,.57);\fill[rouge] (0,.63) circle (.08);
+    \draw (-.24,.13) circle (.09) (.24,.13) circle (.09);
+    \draw (-.2,-.08)--(.2,-.08);
+    \draw (-.55,.12)--(-.74,.25) (.55,.12)--(.74,.25);
+  \end{scope}
+  % Travail en equipe : trois silhouettes et un lien vers une tache commune
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-238mm]current page.north east)},scale=.73,opacity=.28,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw (0,.32) circle (.14) (-.44,.07) circle (.13) (.44,.07) circle (.13);
+    \draw (-.22,-.12) arc (155:25:.28) (-.67,-.48) arc (155:25:.24) (.21,-.48) arc (155:25:.24);
+    \draw[rouge] (-.33,-.25)--(0,-.58)--(.33,-.25);
+    \draw[fill=rouge!20] (0,-.59) circle (.12);
+  \end{scope}
+\end{tikzpicture}}
+\AddToShipoutPictureBG{\decorationsCV}
+
+% --- Composants typographiques ------------------------------------------------
+\titleformat{\section}{\fontsize{9.85}{11}\bfseries\color{bleu}}{}{0pt}{\MakeUppercase}[{\vspace{-2pt}\color{rouge}\titlerule[.66pt]}]
+\titlespacing*{\section}{0pt}{6.2pt}{3.1pt}
+\setlist[itemize]{leftmargin=11pt,topsep=1.1pt,itemsep=.85pt,parsep=0pt,partopsep=0pt,label={\color{rouge}\raisebox{.4ex}{\tiny$\bullet$}}}
+\newcommand{\entry}[4]{%
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.08cm}@{}}
+ {\bfseries\color{bleu}#1} & {\fontsize{8.5}{9.3}\selectfont\color{secondaire}#2} \\[-2pt]
+ {\fontsize{8.5}{9.6}\selectfont\color{secondaire}#3} & {\fontsize{8.5}{9.3}\selectfont\color{secondaire}#4}
+\end{tabularx}\vspace{-3.4pt}\par}
+\newcommand{\gapentry}{\vspace{3.1pt}}
+\newcommand{\comp}[2]{\textbf{\color{bleu}#1} \hspace{2pt} #2\par}
+
+\begin{document}
+% --- Profil & coordonnees -----------------------------------------------------
+\begin{minipage}[t]{.635\linewidth}
+  {\fontsize{21.2}{22.3}\selectfont\bfseries\color{bleu}Youssef EL KATTOUFI}\par\vspace{1.5pt}
+  {\fontsize{10.2}{11.5}\selectfont\bfseries\color{rouge}ÉLÈVE-INGÉNIEUR -- ÉLECTRONIQUE ET INFORMATIQUE}\par\vspace{1.1pt}
+  {\fontsize{9.15}{10}\selectfont\bfseries\color{bleu}\stage}\par
+\end{minipage}\hfill
+\begin{minipage}[t]{.355\linewidth}\raggedleft
+  {\fontsize{8.7}{10.2}\selectfont
+  Choisy-le-Roi, France\\
+  \href{tel:+33651654237}{+33 6 51 65 42 37}\\
+  \href{mailto:elkattoufi.youssef@hotmail.com}{elkattoufi.youssef@hotmail.com}\\
+  \href{https://www.linkedin.com/in/youssef-el-kattoufi-5a04a0282/}{LinkedIn} \quad\textcolor{gris}{|}\quad \href{https://github.com/Darkzveller}{GitHub} }
+\end{minipage}
+\vspace{4.1pt}
+\textcolor{rouge}{\rule{1.35cm}{1.75pt}}\hspace{1pt}\textcolor{gris!65}{\rule{\dimexpr\linewidth-1.45cm\relax}{.6pt}}\par\vspace{3.0pt}
+{\fontsize{9.0}{10.7}\selectfont
+Élève-ingénieur en Électronique et Informatique à \textbf{Polytech Sorbonne}, souhaitant réaliser un semestre d'études au Canada pour approfondir ses compétences en \textbf{électronique}, \textbf{systèmes embarqués} et \textbf{informatique}.\par
+% --- Formation ----------------------------------------------------------------
+\section{Formation}
+\entry{Diplôme d'ingénieur -- Électronique et Informatique}{Sept. 2025 -- juin 2028}{Polytech Sorbonne -- Sorbonne Université}{Paris}
+\vspace{1.1pt}
+\entry{BUT Génie électrique et informatique industrielle Option Electricité et Maîtrise de l'Energie}{Sept. 2022 -- août 2025}{IUT de Cachan -- Université Paris-Saclay}{Cachan}
+
+% --- Experience ---------------------------------------------------------------
+\section{Expériences professionnelles}
+\entry{Surveillant sauveteur aquatique}{Juil. -- août 2026}{Centre aquatique de Villecresnes -- GPSEA}{Villecresnes}
+\begin{itemize}
+  \item Sécurité d'un établissement accueillant jusqu'à \textbf{1\,000 personnes} : surveillance coordonnée en équipe, prévention et interventions de premiers secours.
+\end{itemize}
+\entry{Apprenti ingénieur -- Génie électrique}{Oct. 2024 -- août 2025}{Syctom -- sites Isséane et Saint-Ouen}{Île-de-France}
+\begin{itemize}
+  \item \textbf{GTB industrielle (Isséane) :} cadrage technique, rédaction de pièces du marché public et lancement du renouvellement d'une supervision datant de l'ouverture (2007). \textbf{Gain de 5--10\,\%} sur les usages du bâtiment pilotables (CVC / éclairage), hors procédé d'incinération.
+  \item \textbf{Recharge et énergie :} étude budgétaire et d'amortissement de \textbf{6 bornes de recharge}, pilotage envisagé via GTB, gestion de la puissance et arbitrage entre réseau et production locale ; analyse des options de valorisation de surplus.
+  \item \textbf{Sûreté industrielle (Saint-Ouen) :} modernisation d'une infrastructure de liaisons de sécurité par fibre optique ; suivi de chantier, commandes et coordination des intervenants.
+\end{itemize}
+\gapentry
+\entry{Stagiaire technicien électronicien supérieur}{Avr. -- juin 2024}{Cobham Aerospace Communications}{France}
+\begin{itemize}
+    \item Conception d'un \textbf{banc de test automatisé} de cartes électroniques : développement embarqué \textbf{C++}, interface de commande, séquences de tests fonctionnels, diagnostic et reproductibilité.
+    \item \textbf{Objectif : --30\,\% de durée de test}.
+    \item Schémas et simulations \textbf{LTspice}, essais et documentation.
+\end{itemize}
+\gapentry
+
+% --- Projets ------------------------------------------------------------------
+\section{Projets techniques \& associatifs}
+\entry{Coupe de France de robotique -- Responsable électronique / asservissement}{2024 -- 2025}{Club CRAC -- base roulante, carte moteur et carte maîtresse}{Projet associatif}
+\begin{itemize}
+  \item Développement du \textbf{socle logiciel C++} sur ESP32 (FreeRTOS) et STM32 : pilotage des actionneurs, commandes de la carte maîtresse, échanges \textbf{CAN}, interface de tests, mises à jour \textbf{OTA} ; base commune réutilisable par l'équipe.
+  \item Architecture de commande des \textbf{2 moteurs} : odométrie, asservissements vitesse/position par PID et intégration électronique/logicielle du robot prototype puis implémentation sur le robot de la coupe.
+\end{itemize}
+\gapentry
+\entry{Trottinette à double motorisation -- moteur principal sans terres rares}{2024 -- 2025}{Projet BUT GEII -- conception, électronique, puissance et essais}{IUT de Cachan}
+\begin{itemize}
+\item \textbf{Conception d'une carte électronique (PCB)} dédiée au pilotage d'un \textbf{moteur AC sans terres rares} et d'un \textbf{moteur DC d'assistance}. Développement des commandes sur \textbf{STM32/ESP32}, intégration de fonctions de surveillance (température, état des phases, vitesse et consommation électrique), rebobinage moteur, odométrie, conception mécanique sous \textbf{CAO 3D} et validation sur \textbf{onduleur triphasé}.\end{itemize}
+\gapentry
+\entry{Projet Polytech Sorbonne -- Traitement numérique du signal}{2025 -- 2026}{Réception et démodulation du signal radio DCF77}{Projet universitaire}
+\begin{itemize}
+    \item \textbf{Réception du signal DCF77 (77,5 kHz)} : analyse de mesures à l'oscilloscope et d'enregistrements WebSDR d'un signal modulé en amplitude et bruité.
+
+    \item \textbf{Traitement numérique sous MATLAB} : filtre passe-bande RII d'ordre 8 centré sur 4 372 Hz, filtrage à phase nulle avec \textbf{filtfilt} et réduction du bruit.
+
+    \item \textbf{Démodulation et reconstruction} : redressement, extraction de l'enveloppe par filtre passe-bas de Butterworth et seuillage adaptatif pour retrouver le signal binaire.
+
+    \item \textbf{Détection des impulsions DCF77} : identification des bits 0 et 1 selon leurs durées de \textbf{100 et 200 ms}, mesure des intervalles et visualisation sous MATLAB.
+
+\end{itemize}\gapentry
+
+% --- Competences --------------------------------------------------------------
+\section{Compétences \& certifications}
+{\fontsize{8.65}{10.05}\selectfont
+\comp{Embarqué / électronique :}{C, C++, STM32, ESP32, PCB, VHDL/FPGA, FreeRTOS ; CAN, UART, SPI, I\textsuperscript{2}C, PID.}
+\comp{Programmation / réseau :}{Python, MQTT, HTTP REST, Node-RED, PlatformIO, Git, Arduino.}
+\comp{Conception / laboratoire :}{KiCad, LTspice, MATLAB, SolidWorks, AutoCAD Electrical, Keil, STM32CubeIDE ; oscilloscopes, analyseur logique, prototypage, CNC, impression 3D.}
+\comp{Certifications / langues :}{BNSSA, PSE2 ; français, anglais B1 (documentation technique).}
+}
+\end{document}

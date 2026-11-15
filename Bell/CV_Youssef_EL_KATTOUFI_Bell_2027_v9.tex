@@ -6,9 +6,9 @@
 % Identite : bleu / rouge inspires du logo Sorbonne Universite ; gris du
 %           langage graphique Polytech. Aucune reproduction de logo officiel.
 % Version sans illustrations dans les marges, avec identite bleu / rouge.
-% V7 : rubrique Competences remplacee par les centres d'interet.
+% V9 : retour V7, sans BNSSA / trottinette, police legerement agrandie.
 % ============================================================================
-\documentclass[9pt,a4paper]{extarticle}
+\documentclass[10pt,a4paper]{extarticle}
 \usepackage[a4paper,top=0.82cm,bottom=0.68cm,left=1.24cm,right=1.24cm]{geometry}
 \usepackage{fontspec}
 \setmainfont{Carlito}[BoldFont={Carlito Bold}, ItalicFont={Carlito Italic},Ligatures=NoCommon]
@@ -36,13 +36,13 @@
 \newcommand{\stage}{STAGE BELL 2027 -- DISPONIBLE DÈS AVRIL 2027}
 
 % --- Composants typographiques ------------------------------------------------
-\titleformat{\section}{\fontsize{9.85}{11}\bfseries\color{bleu}}{}{0pt}{\MakeUppercase}[{\vspace{-2pt}\color{rouge}\titlerule[.66pt]}]
+\titleformat{\section}{\fontsize{10.2}{11.8}\bfseries\color{bleu}}{}{0pt}{\MakeUppercase}[{\vspace{-2pt}\color{rouge}\titlerule[.66pt]}]
 \titlespacing*{\section}{0pt}{6.1pt}{2.7pt}
-\setlist[itemize]{leftmargin=11pt,topsep=.65pt,itemsep=.48pt,parsep=0pt,partopsep=0pt,label={\color{rouge}\raisebox{.4ex}{\tiny$\bullet$}}}
+\setlist[itemize]{leftmargin=11pt,topsep=.8pt,itemsep=.65pt,parsep=0pt,partopsep=0pt,label={\color{rouge}\raisebox{.4ex}{\tiny$\bullet$}}}
 \newcommand{\entry}[4]{%
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.08cm}@{}}
- {\bfseries\color{bleu}#1} & {\fontsize{8.5}{9.3}\selectfont\color{secondaire}#2} \\[-2pt]
- {\fontsize{8.5}{9.6}\selectfont\color{secondaire}#3} & {\fontsize{8.5}{9.3}\selectfont\color{secondaire}#4}
+ {\bfseries\color{bleu}#1} & {\fontsize{9}{10.3}\selectfont\color{secondaire}#2} \\[-2pt]
+ {\fontsize{9}{10.4}\selectfont\color{secondaire}#3} & {\fontsize{9}{10.3}\selectfont\color{secondaire}#4}
 \end{tabularx}\vspace{-2.6pt}\par}
 \newcommand{\gapentry}{\vspace{2.4pt}}
 \newcommand{\comp}[2]{\textbf{\color{bleu}#1} \hspace{2pt} #2\par}
@@ -52,11 +52,11 @@
 % Profil et coordonnees ; couleurs et structure d'origine conservees
 \begin{minipage}[t]{.635\linewidth}
   {\fontsize{21.2}{22.3}\selectfont\bfseries\color{bleu}Youssef EL KATTOUFI}\par\vspace{1.5pt}
-  {\fontsize{10.2}{11.5}\selectfont\bfseries\color{rouge}ÉLÈVE-INGÉNIEUR -- ÉLECTRONIQUE ET INFORMATIQUE}\par\vspace{1.1pt}
-  {\fontsize{9.15}{10}\selectfont\bfseries\color{bleu}\stage}\par
+  {\fontsize{10.4}{11.7}\selectfont\bfseries\color{rouge}ÉLÈVE-INGÉNIEUR -- ÉLECTRONIQUE ET INFORMATIQUE}\par\vspace{1.1pt}
+  {\fontsize{9.5}{10.7}\selectfont\bfseries\color{bleu}\stage}\par
 \end{minipage}\hfill
 \begin{minipage}[t]{.355\linewidth}\raggedleft
-  {\fontsize{8.7}{10.2}\selectfont
+  {\fontsize{9.1}{10.5}\selectfont
   Choisy-le-Roi, France\\
   \href{tel:+33651654237}{+33 6 51 65 42 37}\\
   \href{mailto:elkattoufi.youssef@hotmail.com}{elkattoufi.youssef@hotmail.com}\\
@@ -64,17 +64,10 @@
 \end{minipage}
 \vspace{4.1pt}
 \textcolor{rouge}{\rule{1.35cm}{1.75pt}}\hspace{1pt}\textcolor{gris!65}{\rule{\dimexpr\linewidth-1.45cm\relax}{.6pt}}\par\vspace{3.0pt}
-{\fontsize{9.0}{10.7}\selectfont
-Élève-ingénieur en Électronique et Informatique à \textbf{Polytech Sorbonne}, je recherche un \textbf{stage dès avril 2027}. Mes expériences m'ont appris à \textbf{développer et tester} des systèmes, à analyser des problèmes concrets et à \textbf{travailler avec plusieurs équipes}. Je souhaite mettre ces acquis en pratique dans les domaines du logiciel, des réseaux ou des systèmes connectés.\par}
+{\fontsize{9.6}{11.4}\selectfont
+Élève-ingénieur en \textbf{électronique et informatique} à Polytech Sorbonne, je m'intéresse particulièrement à l'\textbf{électronique}, au \textbf{développement logiciel}, aux \textbf{réseaux} et aux \textbf{systèmes connectés}. Mes expériences professionnelles et mes projets techniques m'ont permis d'explorer ces domaines, que je souhaite aujourd'hui approfondir en contribuant à des \textbf{projets concrets}.\par}
 
 \section{Expériences professionnelles}
-\entry{Surveillant sauveteur aquatique}{Juil. -- août 2026}{Centre aquatique de Villecresnes -- GPSEA}{Villecresnes}
-\begin{itemize}
-  \item \textbf{Contexte :} assurer la sécurité d'un établissement pouvant accueillir jusqu'à \textbf{1\,000 personnes}.
-  \item \textbf{Missions :} surveillance, prévention des risques et interventions de premiers secours en coordination avec l'équipe.
-  \item \textbf{Gestion des situations :} dialogue avec les usagers et gestion des tensions liées au respect des règles de sécurité.
-\end{itemize}
-\gapentry
 \entry{Apprenti ingénieur -- Génie électrique}{Oct. 2024 -- août 2025}{Syctom -- sites Isséane et Saint-Ouen}{Île-de-France}
 \begin{itemize}
   \item \textbf{Sujet :} modernisation des installations techniques d'Isséane et de Saint-Ouen, en lien avec l'exploitation, la maintenance et les prestataires.
@@ -110,13 +103,6 @@
   \item \textbf{Missions :} réalisation d'un prototype de base roulante pour tester le code avant son intégration au robot principal ; développement des socles logiciels des cartes actionneurs et de \textbf{machines à états} que l'équipe pouvait compléter ; programmation intégrale des \textbf{PAMI} (déplacement et actionneurs), des commandes moteurs, de l'odométrie et des asservissements \textbf{PID}.
   \item \textbf{Réalisations :} diagnostic et débogage des logiciels et des cartes électroniques ; \textbf{ensemble fonctionnel} à l'issue du projet et développement final du code de la \textbf{carte maître}. \textbf{Outils :} C++, ESP32/STM32, CAN, Git, PlatformIO.
 \end{itemize}
-\gapentry
-\entry{Trottinette à double motorisation -- moteur sans terres rares}{2024 -- 2025}{IUT de Cachan -- électronique de puissance et conception}{Universitaire}
-\begin{itemize}
-  \item \textbf{Sujet :} concevoir le pilotage d'un \textbf{moteur AC sans terres rares} associé à un moteur \textbf{DC} d'assistance.
-  \item \textbf{Missions :} réalisation d'une \textbf{carte PCB} et développement de commandes \textbf{STM32/ESP32} ; suivi de la température, des phases, de la vitesse et de la consommation électrique.
-  \item \textbf{Réalisations :} rebobinage moteur, odométrie, conception \textbf{CAO 3D} et essais avec un \textbf{onduleur triphasé}.
-\end{itemize}
 
 \section{Formation}
 \entry{Diplôme d'ingénieur -- Électronique et Informatique}{2025 -- 2028}{Polytech Sorbonne -- Sorbonne Université}{Paris}
@@ -124,7 +110,7 @@
 \entry{BUT Génie électrique et informatique industrielle -- option Électricité et maîtrise de l'énergie}{2022 -- 2025}{IUT de Cachan -- Université Paris-Saclay}{Cachan}
 
 \section{Intérêts}
-{\fontsize{8.7}{10.1}\selectfont
+{\fontsize{9.4}{11.2}\selectfont
 Vélo \textcolor{rouge}{\textbullet} Lecture de webcomics \textcolor{rouge}{\textbullet} Jeux vidéo \textcolor{rouge}{\textbullet} Bricolage et bidouillage.
 }
 \end{document}

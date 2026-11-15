@@ -6,9 +6,10 @@
 % Identite : bleu / rouge inspires du logo Sorbonne Universite ; gris du
 %           langage graphique Polytech. Aucune reproduction de logo officiel.
 % Version sans illustrations dans les marges, avec identite bleu / rouge.
+% V7 : rubrique Competences remplacee par les centres d'interet.
 % ============================================================================
 \documentclass[9pt,a4paper]{extarticle}
-\usepackage[a4paper,top=0.95cm,bottom=0.82cm,left=1.24cm,right=1.24cm]{geometry}
+\usepackage[a4paper,top=0.82cm,bottom=0.68cm,left=1.24cm,right=1.24cm]{geometry}
 \usepackage{fontspec}
 \setmainfont{Carlito}[BoldFont={Carlito Bold}, ItalicFont={Carlito Italic},Ligatures=NoCommon]
 \usepackage[french]{babel}
@@ -36,14 +37,14 @@
 
 % --- Composants typographiques ------------------------------------------------
 \titleformat{\section}{\fontsize{9.85}{11}\bfseries\color{bleu}}{}{0pt}{\MakeUppercase}[{\vspace{-2pt}\color{rouge}\titlerule[.66pt]}]
-\titlespacing*{\section}{0pt}{7.0pt}{3.1pt}
-\setlist[itemize]{leftmargin=11pt,topsep=.9pt,itemsep=.55pt,parsep=0pt,partopsep=0pt,label={\color{rouge}\raisebox{.4ex}{\tiny$\bullet$}}}
+\titlespacing*{\section}{0pt}{6.1pt}{2.7pt}
+\setlist[itemize]{leftmargin=11pt,topsep=.65pt,itemsep=.48pt,parsep=0pt,partopsep=0pt,label={\color{rouge}\raisebox{.4ex}{\tiny$\bullet$}}}
 \newcommand{\entry}[4]{%
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{3.08cm}@{}}
  {\bfseries\color{bleu}#1} & {\fontsize{8.5}{9.3}\selectfont\color{secondaire}#2} \\[-2pt]
  {\fontsize{8.5}{9.6}\selectfont\color{secondaire}#3} & {\fontsize{8.5}{9.3}\selectfont\color{secondaire}#4}
-\end{tabularx}\vspace{-3.4pt}\par}
-\newcommand{\gapentry}{\vspace{3.0pt}}
+\end{tabularx}\vspace{-2.6pt}\par}
+\newcommand{\gapentry}{\vspace{2.4pt}}
 \newcommand{\comp}[2]{\textbf{\color{bleu}#1} \hspace{2pt} #2\par}
 
 
@@ -70,27 +71,30 @@
 \entry{Surveillant sauveteur aquatique}{Juil. -- août 2026}{Centre aquatique de Villecresnes -- GPSEA}{Villecresnes}
 \begin{itemize}
   \item \textbf{Contexte :} assurer la sécurité d'un établissement pouvant accueillir jusqu'à \textbf{1\,000 personnes}.
-  \item \textbf{Missions :} surveillance et prévention des risques en coordination avec les autres sauveteurs, communication avec le public et interventions de premiers secours.
+  \item \textbf{Missions :} surveillance, prévention des risques et interventions de premiers secours en coordination avec l'équipe.
+  \item \textbf{Gestion des situations :} dialogue avec les usagers et gestion des tensions liées au respect des règles de sécurité.
 \end{itemize}
 \gapentry
 \entry{Apprenti ingénieur -- Génie électrique}{Oct. 2024 -- août 2025}{Syctom -- sites Isséane et Saint-Ouen}{Île-de-France}
 \begin{itemize}
-  \item \textbf{Sujet :} modernisation d'installations techniques en environnement industriel, avec des échanges entre exploitants, prestataires et équipes de maintenance.
-  \item \textbf{Missions et contributions :} analyse des besoins et rédaction de pièces techniques pour le renouvellement de la \textbf{GTB} ; suivi de la modernisation des liaisons de sûreté en \textbf{fibre optique}, commandes et coordination de chantier. Étude de coût et d'amortissement de \textbf{6 bornes de recharge}.
+  \item \textbf{Sujet :} modernisation des installations techniques d'Isséane et de Saint-Ouen, en lien avec l'exploitation, la maintenance et les prestataires.
+  \item \textbf{Missions :} analyse des besoins, rédaction de pièces techniques pour le renouvellement de la \textbf{GTB}, suivi des liaisons de sûreté en \textbf{fibre optique} et étude technico-économique de \textbf{6 bornes de recharge}.
+  \item \textbf{Résultats :} documents validés par la hiérarchie ; projet fibre optique mené à terme et étude des bornes présentée pour engager les suites du projet.
 \end{itemize}
 \gapentry
 \entry{Stagiaire technicien électronicien supérieur}{Avr. -- juin 2024}{Cobham Aerospace Communications}{France}
 \begin{itemize}
-  \item \textbf{Sujet :} fiabiliser et accélérer le contrôle de cartes électroniques.
-  \item \textbf{Missions :} développement en \textbf{C++} de séquences de tests automatisés, création d'une interface de commande, réalisation d'essais et diagnostic des anomalies.
-  \item \textbf{Livrables et outils :} banc de test, documentation technique et simulations sous \textbf{LTspice}. \textbf{Objectif :} estimation de la réduction de la durée de test de \textbf{30\,\%}.
+  \item \textbf{Sujet :} automatiser le contrôle d'une carte électronique.
+  \item \textbf{Missions :} développement en \textbf{C++} des séquences de test et de l'interface de commande, essais et diagnostic des anomalies.
+  \item \textbf{Résultat :} banc de test \textbf{opérationnel}, capable de tester une carte électronique. \textbf{Outils :} C++, LTspice.
 \end{itemize}
 
 \section{Projets techniques \& associatifs}
 \entry{Projet IoT -- Acquisition et partage de mesures}{2026}{Polytech Sorbonne -- ESP32 et capteur de température/humidité}{Universitaire}
 \begin{itemize}
-  \item \textbf{Sujet :} rendre accessibles à distance les mesures d'un capteur connecté, pour pouvoir les consulter et les exploiter.
-  \item \textbf{Missions et résultat :} acquisition des données sur \textbf{ESP32}, transmission via \textbf{MQTT} et \textbf{HTTP REST}, puis création de flux \textbf{Node-RED} pour le suivi des mesures.
+  \item \textbf{Sujet :} consulter à distance les mesures d'un capteur connecté et piloter une sortie de l'ESP32.
+  \item \textbf{Missions :} acquisition des données sur \textbf{ESP32}, communications \textbf{MQTT} et \textbf{HTTP REST}, création des flux et du tableau de bord \textbf{Node-RED}.
+  \item \textbf{Résultat :} système fonctionnel, avec affichage de la température et de l'humidité et commande à distance de la LED.
 \end{itemize}
 \gapentry
 \entry{Traitement du signal -- Réception et décodage DCF77}{2025 -- 2026}{Polytech Sorbonne -- radio à 77,5 kHz}{Universitaire}
@@ -102,9 +106,9 @@
 \gapentry
 \entry{Coupe de France de robotique -- Responsable électronique / asservissement}{2024 -- 2025}{Club CRAC -- robot autonome développé en équipe}{Associatif}
 \begin{itemize}
-  \item \textbf{Sujet :} intégrer la motorisation, les cartes électroniques et le logiciel d'un robot destiné à la Coupe de France de robotique.
-  \item \textbf{Missions :} développement du socle \textbf{C++} sur \textbf{ESP32/STM32}, échanges \textbf{CAN}, pilotage des actionneurs, interface de tests et mises à jour \textbf{OTA}.
-  \item \textbf{Réalisations :} commande de \textbf{2 moteurs}, odométrie et asservissements \textbf{PID} en vitesse/position ; intégration avec l'équipe. \textbf{Outils :} FreeRTOS, Git, PlatformIO.
+  \item \textbf{Sujet :} développer et intégrer l'électronique et le logiciel des robots de la Coupe de France de robotique.
+  \item \textbf{Missions :} réalisation d'un prototype de base roulante pour tester le code avant son intégration au robot principal ; développement des socles logiciels des cartes actionneurs et de \textbf{machines à états} que l'équipe pouvait compléter ; programmation intégrale des \textbf{PAMI} (déplacement et actionneurs), des commandes moteurs, de l'odométrie et des asservissements \textbf{PID}.
+  \item \textbf{Réalisations :} diagnostic et débogage des logiciels et des cartes électroniques ; \textbf{ensemble fonctionnel} à l'issue du projet et développement final du code de la \textbf{carte maître}. \textbf{Outils :} C++, ESP32/STM32, CAN, Git, PlatformIO.
 \end{itemize}
 \gapentry
 \entry{Trottinette à double motorisation -- moteur sans terres rares}{2024 -- 2025}{IUT de Cachan -- électronique de puissance et conception}{Universitaire}
@@ -119,10 +123,8 @@
 \vspace{1pt}
 \entry{BUT Génie électrique et informatique industrielle -- option Électricité et maîtrise de l'énergie}{2022 -- 2025}{IUT de Cachan -- Université Paris-Saclay}{Cachan}
 
-\section{Compétences}
-{\fontsize{8.65}{10.05}\selectfont
-\comp{Programmation :}{C, C++, Python, MATLAB.}
-\comp{Systèmes et communication :}{STM32, ESP32, CAN, UART, SPI, I\textsuperscript{2}C, PID, FreeRTOS, MQTT, HTTP REST.}
-\comp{Logiciels et conception :}{PlatformIO, Git, LTspice, Node-RED, KiCad, SolidWorks, STM32CubeIDE.}
+\section{Intérêts}
+{\fontsize{8.7}{10.1}\selectfont
+Vélo \textcolor{rouge}{\textbullet} Lecture de webcomics \textcolor{rouge}{\textbullet} Jeux vidéo \textcolor{rouge}{\textbullet} Bricolage et bidouillage.
 }
 \end{document}

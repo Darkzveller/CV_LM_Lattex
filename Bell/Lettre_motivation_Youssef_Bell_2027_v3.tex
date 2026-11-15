@@ -1,0 +1,116 @@
+% ============================================================================
+% Lettre de motivation - stage innovation technologique Bell, a partir d'avril 2027
+% Style aligne sur CV_Youssef_EL_KATTOUFI_refonte : Carlito, bleu #263068,
+% rouge #E6332A et illustrations vectorielles identiques en marge droite.
+% Mise en page et decorations graphiques de la lettre originale conservees. Compiler avec XeLaTeX.
+% ============================================================================
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,top=1.36cm,bottom=1.30cm,left=1.84cm,right=2.04cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Carlito}[BoldFont={Carlito Bold},ItalicFont={Carlito Italic},Ligatures=NoCommon]
+\usepackage[french]{babel}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric}
+\usepackage{eso-pic}
+\usepackage[hidelinks]{hyperref}
+\definecolor{bleu}{HTML}{263068}
+\definecolor{rouge}{HTML}{E6332A}
+\definecolor{gris}{HTML}{9EA6B6}
+\definecolor{anthracite}{HTML}{222936}
+\definecolor{secondaire}{HTML}{475269}
+\color{anthracite}
+\hypersetup{pdftitle={Lettre de motivation - Bell 2027 - Youssef EL KATTOUFI},pdfauthor={Youssef EL KATTOUFI}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7.0pt}
+\setlength{\emergencystretch}{1.6em}
+\setstretch{1.14}
+\setlength{\JustifyingParindent}{0pt}
+
+% EXACTEMENT les quatre decorations vectorielles du CV utilisateur.
+\newcommand{\decorationsCV}{%
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[bleu, opacity=.11,line width=.48pt] ([xshift=-8.0mm,yshift=-50mm]current page.north east) -- ([xshift=-8.0mm,yshift=24mm]current page.south east);
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-65mm]current page.north east)},scale=.70,opacity=.29,draw=bleu,line width=.64pt,line cap=round,line join=round]
+    \fill[white] (-.57,-.57) rectangle (.57,.57);
+    \draw[rounded corners=1pt,fill=bleu!6] (-.47,-.45) rectangle (.47,.45);
+    \draw[rounded corners=1pt] (-.27,-.23) rectangle (.27,.23);
+    \foreach \t in {-.31,-.1,.11,.32}{\draw (-.47,\t)--(-.76,\t); \draw (.47,\t)--(.76,\t);}
+    \foreach \t in {-.3,-.1,.1,.3}{\draw (\t,-.45)--(\t,-.72);\draw (\t,.45)--(\t,.72);}
+    \draw[rouge] (-.27,.14)--(-.1,.14)--(-.1,-.03)--(.14,-.03);
+    \fill[rouge] (.14,-.03) circle (.048);
+  \end{scope}
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-116mm]current page.north east)},scale=.75,opacity=.27,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw (-.43,-.57)--(.45,-.57) (0,-.56)--(0,.5) (-.28,-.34)--(0,.5)--(.28,-.34);
+    \fill[rouge] (0,.55) circle (.085);
+    \draw[rouge] (.19,.31) arc (42:-42:.35);
+    \draw[rouge] (-.19,.31) arc (138:222:.35);
+    \draw (.32,.48) arc (42:-42:.62);
+    \draw (-.32,.48) arc (138:222:.62);
+  \end{scope}
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-179mm]current page.north east)},scale=.77,opacity=.27,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw[rounded corners=2pt,fill=bleu!6] (-.55,-.26) rectangle (.55,.36);
+    \draw[fill=rouge!30] (-.35,-.43) circle (.18) (.35,-.43) circle (.18);
+    \fill[bleu] (-.35,-.43) circle (.06) (.35,-.43) circle (.06);
+    \draw (0,.36)--(0,.57);\fill[rouge] (0,.63) circle (.08);
+    \draw (-.24,.13) circle (.09) (.24,.13) circle (.09);
+    \draw (-.2,-.08)--(.2,-.08);
+    \draw (-.55,.12)--(-.74,.25) (.55,.12)--(.74,.25);
+  \end{scope}
+  \begin{scope}[shift={([xshift=-8.0mm,yshift=-238mm]current page.north east)},scale=.73,opacity=.28,draw=bleu,line width=.75pt,line cap=round,line join=round]
+    \draw (0,.32) circle (.14) (-.44,.07) circle (.13) (.44,.07) circle (.13);
+    \draw (-.22,-.12) arc (155:25:.28) (-.67,-.48) arc (155:25:.24) (.21,-.48) arc (155:25:.24);
+    \draw[rouge] (-.33,-.25)--(0,-.58)--(.33,-.25);
+    \draw[fill=rouge!20] (0,-.59) circle (.12);
+  \end{scope}
+\end{tikzpicture}}
+\AddToShipoutPictureBG{\decorationsCV}
+
+
+\begin{document}
+% Graphisme et dessins TikZ originaux conserves
+{\setstretch{1}
+{\fontsize{19.6}{21.5}\selectfont\bfseries\color{bleu}Youssef EL KATTOUFI}\par\vspace{2pt}
+{\fontsize{9.8}{11}\selectfont\bfseries\color{rouge}ÉLÈVE-INGÉNIEUR -- ÉLECTRONIQUE ET INFORMATIQUE}\par\vspace{3.5pt}
+{\fontsize{9.2}{10.2}\selectfont Choisy-le-Roi, France\quad\textcolor{gris}{|}\quad +33 6 51 65 42 37\quad\textcolor{gris}{|}\quad \href{mailto:elkattoufi.youssef@hotmail.com}{elkattoufi.youssef@hotmail.com}}\par}
+\vspace{7pt}
+\textcolor{rouge}{\rule{1.45cm}{1.65pt}}\hspace{1.5pt}\textcolor{gris!65}{\rule{\dimexpr\linewidth-1.65cm\relax}{.55pt}}\par
+\vspace{6pt}
+
+{\fontsize{9.35}{10.5}\selectfont\raggedleft
+À l'attention de l'équipe Acquisition de talents Campus\\
+Bell Canada\\[3pt]
+Choisy-le-Roi, le 15 novembre 2026\par}
+\vspace{5pt}
+{\fontsize{10}{11.5}\selectfont\bfseries\color{bleu}Objet : Candidature au programme de stages 2027 -- Innovation technologique (réf. 432858)\par}
+\vspace{3pt}
+
+\fontsize{10.7}{12.35}\selectfont
+Madame, Monsieur,
+
+\justifying
+Actuellement étudiant en quatrième année du cycle ingénieur en Électronique et Informatique à Polytech Sorbonne (Sorbonne Université), après avoir obtenu un BUT Génie Électrique et Informatique Industrielle à l'IUT de Cachan, je souhaite vous transmettre ma candidature pour les futures opportunités de stage en innovation technologique chez Bell. Je suis \textbf{disponible à partir d'avril 2027} et je poursuivrai mes études après ce stage.
+
+Depuis le lycée, je souhaite m'investir dans le domaine de l'ingénierie et je me suis progressivement orienté vers l'électronique, l'informatique et les systèmes embarqués. Ce qui m'intéresse le plus, ce n'est pas seulement d'utiliser une technologie, mais de comprendre pourquoi elle est choisie, comment elle fonctionne et comment elle peut résoudre un problème concret.
+
+C'est aussi ce qui m'attire chez Bell. L'entreprise développe ses activités au-delà des télécommunications traditionnelles, notamment dans les réseaux et les services technologiques. Un stage au sein de vos équipes me permettrait de découvrir la manière dont ces solutions sont conçues, testées et déployées, tout en participant à des projets qui ont une utilité réelle.
+
+Lors de mon stage chez Cobham Aerospace Communications, j'ai travaillé à la conception d'un banc de test de cartes électroniques. Le sujet n'était pas simplement de programmer en C++ : il fallait organiser des séquences de tests, comprendre les anomalies rencontrées et faciliter les vérifications des cartes. L'objectif était de réduire le temps nécessaire aux essais. Ce travail m'a appris à relier la programmation aux contraintes du matériel et à vérifier concrètement les solutions développées.
+
+Mon alternance au Syctom m'a apporté une autre expérience. J'ai notamment participé à la préparation du renouvellement d'une supervision technique et au suivi de la modernisation de liaisons de sûreté par fibre optique. Ces missions m'ont amené à analyser des besoins, à préparer des documents techniques et à échanger avec différents intervenants pour faire avancer les projets. Elles m'ont montré qu'une solution technique doit aussi être comprise, organisée et suivie avec les personnes qui la mettent en œuvre.
+
+En parallèle, au sein du club de robotique CRAC, j'ai participé avec d'autres étudiants au développement d'un robot autonome. Nous devions faire communiquer les cartes, commander deux moteurs et intégrer les différentes parties du système. J'ai travaillé sur les commandes en C++ et les asservissements, en tenant compte du travail réalisé par les autres membres. J'ai également mené un projet IoT d'acquisition et de transmission de mesures avec un ESP32, MQTT et HTTP. Ces expériences m'ont surtout appris à chercher, tester, corriger et expliquer mes choix, plutôt qu'à simplement aligner des langages de programmation.
+
+Je souhaite aujourd'hui mettre cette manière de travailler au service de vos équipes et continuer à progresser au contact d'ingénieurs expérimentés. Curieux et motivé, je suis prêt à m'investir aussi bien dans le développement et les essais logiciels que dans des sujets liés aux réseaux ou aux systèmes connectés, selon les besoins des projets.
+
+Je me tiens à votre disposition pour un entretien afin de discuter de ma candidature plus en détail et de vous présenter les projets auxquels j'ai participé.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{2pt}
+{\raggedleft\bfseries\color{bleu}Youssef EL KATTOUFI\par}
+\end{document}

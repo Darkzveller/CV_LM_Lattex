@@ -1,0 +1,38 @@
+% Compiler avec pdfLaTeX. S1 désigne la première semaine du stage.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,tabularx,array,booktabs,xcolor}
+\usepackage[margin=19mm]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{rougeCV}{HTML}{E6332A}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\newcommand{\periode}[1]{\textcolor{rougeCV}{\textbf{#1}}}
+\newcommand{\phase}[1]{\textcolor{rougeCV}{\textbf{#1}}}
+\begin{document}
+{\small MGIES-Lab \enspace / \enspace Université nationale du Laos \hfill Stage 2027}\par
+\vspace{4mm}
+{\LARGE\bfseries\color{rougeCV} Planning du stage sur le micro-réseau}\par
+\vspace{2mm}
+Youssef El Kattoufi \enspace / \enspace Polytech Sorbonne \enspace / \enspace 17 semaines\par
+\vspace{4mm}
+\textbf{Priorité :} fiabiliser les mesures du banc R4.1, depuis les modules PZEM jusqu'à leur enregistrement. Les périodes se chevauchent : les relevés démarrent pendant la mise en service et la rédaction de l'article accompagne les essais.\par
+\vspace{4mm}
+\small
+\begin{tabularx}{\linewidth}{@{}p{27mm}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\phase{Période} & \phase{Travail prévu} \\ \midrule
+\periode{S1} & \phase{Prise en main.} Découvrir le laboratoire, les équipements et les consignes de sécurité. \\[2.4mm]
+\periode{S1 à S2} & \phase{Bibliographie.} Étudier les micro-réseaux et les bases du suivi, de la notification et de la vérification (MRV) pour les crédits carbone. \\[2.4mm]
+\periode{S2 à S3} & \phase{Diagnostic.} Suivre une mesure du PZEM à l'ordinateur en passant par les ESP32. Repérer où apparaissent les valeurs invalides ou les pertes de communication. Mettre à jour le schéma de câblage. \\[2.4mm]
+\periode{S3 à S4} & \phase{Conception.} Proposer une architecture pour transmettre et enregistrer les mesures, y compris en cas de coupure. \textbf{Fin S4 (M1) :} valider avec les encadrants les choix techniques et les critères de réussite. \\[2.4mm]
+\periode{S5 à S10} & \phase{Réalisation et intégration.} Le binôme de l'IUT travaille en priorité sur l'acquisition (PZEM, ESP32, météo et LabVIEW). Youssef intègre les éléments et pilote les essais des modes de fonctionnement. Priorité au mode raccordé à EDL. La commande des relais et les essais en modes hybride et autonome dépendent de l'avancement. \textbf{S8 (M2) :} faire le bilan intermédiaire. \\[2.4mm]
+\periode{S9 à S11} & \phase{Installation sur le banc R4.1.} Mettre l'ensemble en service et démarrer l'enregistrement continu des mesures \textbf{(M3)}. \\[2.4mm]
+\periode{S11 à S15} & \phase{Essais et validation.} Comparer les mesures à l'appareil de référence, vérifier la continuité des relevés et la conservation des données lors d'une coupure planifiée. Corriger et retester si nécessaire. Cible proposée : recueillir au moins 95\,\% des mesures attendues pendant au moins quatre semaines consécutives. \\[2.4mm]
+\periode{Dès S12} & \phase{Article en parallèle.} Rédiger avec le Dr Vilaisarn un article sur le système rénové et sa validation, à partir des résultats obtenus. La soumission est prévue après le stage. \\[2.4mm]
+\periode{S16 à S17} & \phase{Documentation et transmission.} Déposer le code sur le Git du laboratoire, préparer le guide d'exploitation et de maintenance, puis former les étudiants locaux au redémarrage et à l'entretien du banc \textbf{(M4)}. \\[2.4mm]
+\periode{S17} & \phase{Présentation finale.} Présenter les résultats et finaliser le rapport de stage. \\
+\bottomrule
+\end{tabularx}
+\end{document}
